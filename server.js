@@ -113,11 +113,31 @@ app.post('/api/animals', (req, res) => {
     res.json(animal);
   }
 });
+
+// 
+// 
 // GET ROUTE to open the index page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
+// GET ROUTE to connect animals
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+// GET ROUTE to connect zookeepers
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+// GET ROUTE for wildcard requests that sends back to index
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+// 
+// 
 //End of page to chain onto the server
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);

@@ -117,6 +117,26 @@
         "hungry"
       ],
       "id": "11"
+    },
+    {
+      "name": "Terry",
+      "species": "Tiger",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "12"
+    },
+    {
+      "name": "Terry",
+      "species": "Tiger",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "zany",
+        "anxious",
+        "loving"
+      ],
+      "id": "13"
     }
   ]
 }
