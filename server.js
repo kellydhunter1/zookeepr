@@ -8,6 +8,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+// creates a route for the js and css files
+app.use(express.static('public'));
 
 // filter functionality
 function filterByQuery(query, animalsArray) {
@@ -110,6 +112,10 @@ app.post('/api/animals', (req, res) => {
     const animal = createNewAnimal(req.body, animals);
     res.json(animal);
   }
+});
+// GET ROUTE to open the index page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 //End of page to chain onto the server
