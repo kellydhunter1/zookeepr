@@ -137,6 +137,16 @@
         "loving"
       ],
       "id": "13"
+    },
+    {
+      "name": "Charlene",
+      "species": "Peacock",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "zany",
+        "goofy"
+      ],
+      "id": "14"
     }
   ]
 }
